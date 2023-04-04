@@ -1,0 +1,26 @@
+.checked {
+    text-decoration: line-through;
+    color: red;
+}
+
+ul {
+    list-style: none;
+}
+
+.conteudo{
+    background-image: url('https://sosupermercado.com.br/wp-content/uploads/2019/12/blog3.jpg');
+    background-position: center;
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 0vh;
+    margin-top: 0vh;
+    margin-right: 0vh;
+    margin-left: 0vh;
+}
+
+body{
+    margin: 5;
+    padding: 5;
+    font-family: "Roboto", sans-serif;
+}
