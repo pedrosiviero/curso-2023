@@ -1,0 +1,35 @@
+<h1 class="display-4">Cadastro de Dependentes</h1>
+
+<form class="form-group" method="post" action="/dependentes">
+
+    <input type="hidden" id="id" name="id" value="{{data.id}}">
+
+    <div class="form-group">
+        <label for="nome">Nome completo</label>
+        <input type="text" class="form-control" placeholder="Nome completo" id="nome" name="nome" value="{{data.nome}}"
+            required>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="telefone">Telefone</label>
+            <input type="text" class="form-control" placeholder="(00) 00000-0000" id="telefone" name="telefone" oninput="formatatelefone()" maxlength="11" autocomplete="off" required>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="funcionario_id">Funcionário ID</label>
+            <input type="text" class="form-control" id="funcionario_id" name="funcionario_id" required>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-lg btn-block">
+        Salvar
+    </button>
+    <a class="btn btn-info btn-lg btn-block" href="/funcionario">Voltar</a>
+</form>
+
+<script>
+ function formatatelefone() {
+        let inputtelefone = document.getElementById("telefone").value;
+        document.getElementById("telefone").value = inputTELEFONE.replace(/[^\d]/g, "").replace(/(\d{2})(\d{1})(\d{4})(\d{4})/, "($1) $2 $3-$4");
+    }
+</script>
