@@ -1,0 +1,55 @@
+<style>
+  .form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+  }
+
+  .form-signin .checkbox {
+    font-weight: 400;
+  }
+
+  .form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .form-signin .form-control:focus {
+    z-index: 2;
+  }
+
+  .form-signin input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+</style>
+
+
+<main class="form-signin">
+  <form class="form-group" method="POST" action="/usuario/login">
+    <img class="mb-4" src="/imagens/techrecycle-removebg-preview.png" alt="" width="220" height="220">
+    <h1 class="h3 mb-3 fw-normal">Fazer login</h1>
+    <input type="text" id="inputNome" name="usuario" class="form-control" required="" autofocus="" placeholder="Nome"
+      value="{{data.nome}}">
+    <input type="password" id="inputPassword" name="senha" class="form-control" placeholder="Senha" required=""
+      value="{{data.senha}}">
+    <div class="checkbox mb-3">
+      <label>
+        <a class="nav-item nav-link active" href="/usuario">Esqueci minha senha</a>
+      </label>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit" href="http://localhost:8080/usuario/produtos">Entrar</button>
+    <p>{{msg}}</p>
+  </form>
+</main>
